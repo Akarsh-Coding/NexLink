@@ -4,9 +4,10 @@
   "description": "",
   "license": "ISC",
   "author": "Akarsh Kumar",
-  "type": "commonjs",
+  "type": "module",
   "main": "index.js",
   "scripts": {
+    "dev": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
