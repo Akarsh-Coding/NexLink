@@ -7,3 +7,15 @@ Content-Type: application/json
     "email": "testuser123@example.com",
     "password": "secret123"
 }
+
+
+
+###
+
+POST http://localhost:9090/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "testuser123@example.com",
+    "password": "secret123"
+}
