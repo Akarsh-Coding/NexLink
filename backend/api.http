@@ -19,3 +19,9 @@ Content-Type: application/json
     "email": "testuser123@example.com",
     "password": "secret123"
 }
+
+
+
+###
+
+GET http://localhost:9090/get_user&profile?token=d8304d556fa10d289b9c03d1154258d1613f521e7044ccb427cf1a0ec7553bb4 HTTP/1.1

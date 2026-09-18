@@ -36,7 +36,7 @@ const workSchema = new mongoose.Schema({
 const profileSchema = new mongoose.Schema({
     userId:{
         type: mongoose.Schema.Types.ObjectId,
-        ref: "User",
+        ref: "user",
         unique: true
     },
     bio:{
