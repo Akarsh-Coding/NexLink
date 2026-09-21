@@ -106,3 +106,32 @@ export const getUserAndProfile = async (req, res) => {
         return res.status(500).json({ message: error.message });
     }
 }
+
+
+
+export const updateProfileData = async (req, res) => {
+    try {
+        const { token, ...newProfileData } = req.body;
+        const UserProfile = await User.findOne({ token: token });
+
+        if (!UserProfile) return res.status(404).json({ message: "User not found" });
+        const profile_to_update = await Profile.findOne({ userId: UserProfile._id });
+
+        Object.assign(profile_to_update, newProfileData);
+        await profile_to_update.save();
+
+        return res.status(200).json({ message: "Profile updated successfully" });
+    } catch (error) {
+        return res.status(500).json({ message: error.message });
+    }
+};
+
+
+export const getAllUserProfile = async (req, res) => {
+    try{
+        const allProfiles = await Profile.find().populate("userId", "name username email profilePicture");
+        return res.status(200).json(allProfiles);
+    }catch (error) {
+        return res.status(500).json({ message: error.message });
+    }
+}
