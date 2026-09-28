@@ -24,7 +24,7 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:9090/get_user&profile?token=0a3bbacb880ed696a4bf885c90b5d4495581290fd7253a5bdd84b7658ef6e447 HTTP/1.1
+GET http://localhost:9090/get_user&profile?token=96235cdf1991da7dd4a809f615018fc6c3e43a8170548b14363106ac15b9e7c6 HTTP/1.1
 
 
 ###

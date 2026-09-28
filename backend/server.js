@@ -18,6 +18,7 @@ app.use(express.json());
 app.use(postRoutes);
 app.use(userRoutes);
 
+app.use(express.static('uploads'));
 
 import dns from 'dns';
 dns.setServers(['1.1.1.1', '8.8.8.8']);
